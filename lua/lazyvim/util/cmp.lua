@@ -89,7 +89,7 @@ function M.confirm(opts)
   }, opts or {})
   return function(fallback)
     if cmp.core.view:visible() or vim.fn.pumvisible() == 1 then
-      LazyVim.create_undo()
+      -- LazyVim.create_undo()
       if cmp.confirm(opts) then
         return
       end
