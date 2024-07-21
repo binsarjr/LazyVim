@@ -88,12 +88,12 @@ function M.confirm(opts)
     behavior = cmp.ConfirmBehavior.Insert,
   }, opts or {})
   return function(fallback)
-    if cmp.core.view:visible() or vim.fn.pumvisible() == 1 then
-      -- LazyVim.create_undo()
-      if cmp.confirm(opts) then
-        return
-      end
-    end
+    -- if cmp.core.view:visible() or vim.fn.pumvisible() == 1 then
+    --   -- LazyVim.create_undo()
+    --   if cmp.confirm(opts) then
+    --     return
+    --   end
+    -- end
     return fallback()
   end
 end
